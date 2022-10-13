@@ -39,7 +39,33 @@ header .navbar li{
 }
 header .navbar a{
     color: #fff;
-} 
+    position: relative;
+    cursor: pointer;
+}
+header .navbar a::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25px;
+    width: 0;
+    height: 2.5px;
+    background-color: #fff;
+    transition: width 0.25s ease-out;
+}
+header .navbar a:hover::before{
+    content: "";
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+header .menu{
+    display: none;
+}
+header .menu img{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
 
 .hero{
     background-color: #74C69D;
@@ -74,11 +100,19 @@ header .navbar a{
 .hero .button{
     background: #FFFFFF;
     border-radius: 5px;
+    border: 2px solid #fff;
+    cursor: pointer;
     width: 120px;
     height: 25px;
     font-size: 20px;
     text-align: center;
     padding: 15px;
+    transition: all .3s ease-in-out;
+}
+.hero .button:hover{
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+    color: #fff;
 }
 
 .partner{
@@ -118,11 +152,19 @@ header .navbar a{
     background: #212529;
     color: #fff;
     border-radius: 5px;
+    border: 2px solid #000;
     width: 120px;
     height: 25px;
     font-size: 20px;
     text-align: center;
     padding: 15px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.btn:hover{
+    background: transparent;
+    color: #000;
+    transition: all .3s ease-in-out;
 }
 
 .work{
@@ -137,7 +179,7 @@ header .navbar a{
     color: #212529;
     font-family: 'Crimson Text';
     font-weight: 700;
-    font-size: 40px;
+    font-size: 42px;
 }
 .work .section1 img{
     padding-right: 110px;
@@ -189,6 +231,11 @@ header .navbar a{
     padding-top: 20px;
     padding-bottom: 10px;
     box-shadow: 6px 9px 23px -4px rgba(0,0,0,0.47);
+    transition: all .3s ease-in-out;
+}
+.team .card:hover{
+    transform: translateY(-20px);
+    transition: all .3s ease-in-out;
 }
 .team .card .name{
     padding-top: 19px;
@@ -216,8 +263,103 @@ footer{
 }
 footer img{
     padding-right: 20px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+footer img:hover{
+    transform: scale(1.2);
+    transition: all .2s ease-in-out;
 }
 footer .right{
     color: #fff;
     font-size: 20px;
+}
+
+@media (max-width: 500px) {
+    header{
+        padding: 20px;
+    }
+    header .navbar{
+        display: none;
+    }
+    header .menu{
+        display: inline-block;
+    }
+    .hero{
+        flex-direction: column-reverse;
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+    .hero img{
+        width: 380px;   
+        height: 250px;
+    }
+    .hero .title{
+        padding-top: 30px;
+        font-size: 17px;
+    }
+    .hero .subtitle{
+        font-size: 30px;
+    }
+    .hero .content{
+        font-size: 15px;
+        padding-right: 50px;
+    }
+    .hero .button{
+        padding: 5px;
+    }
+
+    .partner .title{
+        font-size: 16px;
+    }
+    .partner .subtitle{
+        font-size: 30px;
+    }
+    .partner .content{
+        font-size: 17px;
+    }
+    .partner .images img{
+        padding-left: 67px;
+    }
+    .partner .button{
+        padding: 10px;
+        font-size: 17px;
+        margin-bottom: 40px;
+    }
+
+    .work{
+        padding-top: 60px;
+        padding: 0;
+    }
+    .work .section1{
+        flex-direction: column;
+    }
+    .work .section1 img{
+        padding-left: 100px;
+    }
+    .work .section2 img{
+        padding-right: 100px;
+    }
+    .work .section2{
+        flex-direction: column-reverse;
+    }
+    .work img{
+        width: 335px;
+        height: 240.88px;
+    }
+    .work .title{
+        font-size: 30px;
+        padding-left: 20px;
+        margin-top: 50px;
+    }
+    .work .content{
+        padding-left: 20px;
+        padding-right: 40px;
+        font-size: 15px;
+    }
+    .work .button{
+        margin-left: 20px;
+        padding: 10px;
+        font-size: 17px;
+    }
 }
