@@ -58,6 +58,12 @@ header .navbar a:hover::before{
     left: 0;
     right: auto;
 }
+header .navbar a.active::before{
+    content: "";
+    width: 100%;
+    left: 0;
+    right: auto;
+}
 header .menu{
     display: none;
 }
@@ -275,91 +281,52 @@ footer .right{
     font-size: 20px;
 }
 
-@media (max-width: 500px) {
-    header{
-        padding: 20px;
-    }
-    header .navbar{
-        display: none;
-    }
-    header .menu{
-        display: inline-block;
-    }
+@media (max-width: 1024px) {
     .hero{
-        flex-direction: column-reverse;
-        padding: 20px;
-        padding-bottom: 40px;
-    }
-    .hero img{
-        width: 380px;   
-        height: 250px;
-    }
-    .hero .title{
-        padding-top: 30px;
-        font-size: 17px;
+        padding: 70px 90px;
     }
     .hero .subtitle{
-        font-size: 30px;
+        font-size: 35px;
     }
     .hero .content{
         font-size: 15px;
-        padding-right: 50px;
     }
     .hero .button{
-        padding: 5px;
+        padding: 10px;
+        font-size: 19px;
+    }
+    .hero img{
+        width: 500px;
     }
 
-    .partner .title{
-        font-size: 16px;
-    }
-    .partner .subtitle{
-        font-size: 30px;
-    }
-    .partner .content{
-        font-size: 17px;
-    }
-    .partner .images img{
-        padding-left: 67px;
-    }
-    .partner .button{
-        padding: 10px;
-        font-size: 17px;
-        margin-bottom: 40px;
+    .btn{
+        padding: 15px;
+        font-size: 19px;
     }
 
     .work{
-        padding-top: 60px;
         padding: 0;
-    }
-    .work .section1{
-        flex-direction: column;
-    }
-    .work .section1 img{
-        padding-left: 100px;
-    }
-    .work .section2 img{
-        padding-right: 100px;
-    }
-    .work .section2{
-        flex-direction: column-reverse;
-    }
-    .work img{
-        width: 335px;
-        height: 240.88px;
+        margin-top: 30px;
     }
     .work .title{
-        font-size: 30px;
-        padding-left: 20px;
-        margin-top: 50px;
+        font-size: 35px;
     }
     .work .content{
-        padding-left: 20px;
-        padding-right: 40px;
         font-size: 15px;
     }
-    .work .button{
-        margin-left: 20px;
-        padding: 10px;
-        font-size: 17px;
+    .work img{
+        width: 470px;
+    }
+    .work .section1{
+        padding-right: 30px;
+        padding-left: 50px;
+    }
+    .work .section2{
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .team .carousel{
+        margin-left: 30px;
     }
 }
