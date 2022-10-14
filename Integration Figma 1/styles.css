@@ -310,6 +310,7 @@ main {
     border: 1px solid #6b6b6b6b;
     border-radius: 5px;
     height: 30px;
+    padding-left: 20px;
 }
 
 .search .label button:hover{
