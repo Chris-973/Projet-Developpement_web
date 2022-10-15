@@ -13,6 +13,7 @@ body{
 }
 
 header{
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     background-color: #74C69D;
@@ -102,9 +103,16 @@ header .menu img{
     justify-content: center;
 }
 .image img{
+    z-index: -12;
     padding-right: 55px;
     padding-bottom: 55px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
 }
+.image img:hover{
+    transform: translateY(-20px);
+    transition: all .3s ease-in-out;
+} 
 
 .button{
     margin: auto;
