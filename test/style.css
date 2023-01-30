@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #222;
+  color: #fff;
+  padding: 10px 50px;
+}
+
+.navlogo {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.navbar ul {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  cursor: pointer;
+}
+.navbar li {
+  font-size: 20px;
+}
+#dropdown-menu li:hover ul {
+  position: absolute;
+  display: block;
+  background-color: #222;
+  width: 100%;
+}
+
+#dropdown-menu ul {
+  display: none;
+}
